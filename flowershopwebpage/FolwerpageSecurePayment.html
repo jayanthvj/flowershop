@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Flower Shop Page
+    </title>
+    <link rel="stylesheet" type="text/css" href="Styles\FlowerPagestyle.css" />
+    <script src="Script\validation.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <form id="formflower" runat="server">
+        <h1 class="Fontcolor">FLOWER SHOP ONLINE</h1>
+        <h2>&nbsp;</h2>
+        
+            <div class="row">
+        <div class="column">
+           <img src="Images\img.png" class="Displaypicture" id="Displaypicture"> 
+        </div>
+        <div class="column_after">
+             <p class="h3">Secure Payment Page</p>
+            <div class="row_form">
+                <div class="column_form">
+                    <p><strong>Select Language</strong> </p>
+                    <p>Payment menthod</p>
+                    <p>Description</p>
+                    <p>Amount</p>
+                </div>
+                <div class="column_form3">
+                    <p><select id="language" class="DropDownList">
+                        <option Value="English">English</option>
+                        <option Value="French">French</option>
+                        <option Value="German">German</option></select></p>
+                    <p><strong>Visa</strong> </p>
+                    <p><strong>Item ordered</strong></p>
+                    <p><strong>£100.00</strong></p>
+                </div>   
+                <div class="column_form4">
+                    <p><img src="Images\visa_PNG30.png" class="visa_image"/></p>
+                </div>
+           </div>
+            <div class="form">
+              <p class="title_card">Card details</p> 
+            <p>You must fill in fields marked with *</p>
+            <div class="row_form">
+                <div class="column_form">
+                    <p>* Card number</p><span id="cardnumberspace" style="display:none">&nbsp;</span>
+                    <p>* <a href="https://www.cvvnumber.com/">Security code</a></p><span id="cvvspace" style="display:none">&nbsp;</span>
+                    <p>* Expiry date</p><span id="datespace" style="display:none">&nbsp;</span>
+                    <p  class="para_height">* Cardholder's name</p><span id="namespace" style="display:none">&nbsp;</span>
+                </div>
+                <div class="column_form_after">
+                    <p><input type="text" class="TextBox" ID="cardNumber" onchange="cardnumbervalidation()"/></p><span id="cardnumber" style="display:none"> Enter the validate cardnumber</span>
+                    <p><input class="TextBox1" ID="securityNumber" type="password" onchange="validateSecurityCode()"/></p><span id="cvv" style="display:none"> Enter the validate ccv number</span>
+                    <p><select ID="months" onchange="ExpirydateValidation()" >
+                        <option value=""></option>
+                        <option Value="01">01</option>
+                        <option Value="02">02</option>
+                        <option Value="03">03</option>
+                        <option Value="04">04</option>
+                        <option Value="05">05</option>
+                        <option Value="06">06</option>
+                        <option Value="07">07</option>
+                        <option Value="08">08</option>
+                        <option Value="09">09</option>
+                        <option Value="10">10</option>
+                        <option Value="11">11</option>
+                        <option Value="12">12</option>
+                       </select> &nbsp;<select ID="year">
+                        <option value=""></option>
+                          <option Value="2021">2021</option>
+                           <option Value="2022">2022</option>
+                           <option Value="2023">2023</option>
+                           <option Value="2024">2024</option>
+                           <option Value="2025">2025</option>
+                           <option Value="2026">2026</option>
+                           <option Value="2027">2027</option>
+                           <option Value="2028">2028</option> </select></p><span id="yearandmonth" style="display:none"> Enter the validate year and month</span>
+                    <p><input type="text" class="TextBox" ID="cardHoldersName" onchange="CardholderNameValidation()"/></p><span id="name" style="display:none"> Enter the validate name</span>
+                </div>
+            </div> 
+             <p class="title_card">Cardholder details</p>
+             <p>You must fill in fields marked with *</p>
+            <div class="row_form">
+                <div class="column_form">
+                    <p class="para_height">* Address</p><span id="addressspace" style="display:none">&ensp;</span>
+                    <p class="para_height">&ensp; Address 2</p><span id="address2space" style="display:none">&ensp;</span>
+                    <p class="para_height">&ensp; Address 3</p><span id="address3space" style="display:none">&ensp;</span>
+                    <p class="para_height">* Town/City</p><span id="cityspace" style="display:none">&ensp;</span>
+                    <p class="para_height">&ensp; Region</p><span id="regionspace" style="display:none;">&ensp;</span>
+                     <p class="para_height">* Postcode/Zip code</p><span id="pincodespace" style="display:none">&ensp;</span>
+                     <p class="para_height">* Country</p><span id="countryspace" style="display:none">&ensp;</span>
+                    <p class="para_height">&ensp; Telephone</p><span id="phonespace" style="display:none">&ensp;</span>
+                     <p class="para_height">&ensp; Fax</p><span id="faxspace" style="display:none">&ensp;</span>
+                     <p class="para_height">* Email address</p><span id="emailspace" style="display:none">&ensp;</span>
+                </div>
+                <div class="column_form_after" id="validate">
+                    <p><input type="text" Class="TextBox" ID="Address1" onchange="Addressvalidation()"/></p><span id="address" style="display:none">Enter the validate Address</span>
+                    <p><input class="TextBox" ID="Address"/></p><span id="address2" style="display:none;">Enter the validate Address</span>
+                     <p><input class="TextBox" ID="Address3"/></p><span id="address3" style="display:none;">Enter the validate Address</span>
+                     <p><input class="TextBox" ID="City" onchange="Townvalidation()"/></p><span id="city" style="display:none"> Enter the validate city</span>
+                     <p><input class="TextBox" ID="Region" onchange="RegionValidation()"/></p><span id="region" style="display:none;"> Enter the validate region</span>
+                     <p><input class="TextBox2" ID="pincode" onchange="Postalcodevalidation()"/></p><span id="zipcode" style="display:none"> Enter the validate pincode</span>
+                    <p><select class="DropDownList" ID="Country">
+                        <option Value="United Kingdom">United Kingdom</option>
+                        <option Value="India">India</option>
+                        <option Value="United States">United States</option>
+                        <option Value="China">China</option>
+                        <option Value="France">France</option>
+                        <option Value="Germany">Germany</option>
+                        <option Value="Russia">Russia</option></select></p><span id="country" style="display:none"> Enter the validate country name</span>
+                    <p><input class="TextBox2" ID="Telephone" onchange="telephonevalidation()"/></p><span id="telephone" style="display:none"> Enter the validate number</span>
+                     <p><input class="TextBox2" ID="Fax" onchange="faxnumbervalidation()"/></p><span id="fax" style="display:none"> Enter the validate fax number</span>
+                     <p><input class="TextBox" ID="email" onchange="emailvalidation()"/></p><span id="emailID" style="display:none"> Enter the validate email</span>
+                </div>
+            </div>
+                </div>
+             <div class="row_form">
+                <div class="column_form">
+                   <label><input type="image" class="button_startimage" src="Images\startAgain.png" id="Startagain" /></label><label class="Text" >START AGAIN</label>
+                    <p><input type="image" class="button_cancelimage" src="Images\cancel.png" id="cancel" /><label>CANCEL</label></p>
+                </div>
+                <div class="column_form_after1" >
+                    <a href="#" type="image"  id="makepayment" onclick="Payment()"><img class="button_paymentimage" src="Images\gg.png" /></a><p class="button_makepayment">MAKE PAYMENT</p>
+                </div>
+            </div> 
+            <hr />
+            <label class="label">Refunds and Returns </label>
+            <p class="Font">For more information visit our <a style="color:blue" href="http://support.worldpay.com/support/kb/bg/transactionmanagement/tm5100.html">Refunds and Returns Policy.</a></p>
+             <div class="row_form">
+                <div class="column_form">
+                    <p><Img runat="server" src="Images\pay.png" CssClass="pay" /></p>
+                </div>
+                <div class="column_form_afterpicture">
+                    <p class="button_worldpay">For help with your payment visit the <a href="https://www.worldpay.com/en-gb/enterprise-support">WorldPay Help .</a></p>
+                </div>
+            </div> 
+        </div>
+       
+               <div class="column_form5">  
+        <p> <input type="image" ID="ImageButton1" src="Images\gg1.png" width="30px" Height="30px"/></p>
+      
+          </div>
+    </div>
+        <footer> Thank you for shopping at Flowershop. Have a nice day</footer>
+
+    </form>
+</body>
+</html>
+

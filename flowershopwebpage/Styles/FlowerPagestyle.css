@@ -1,0 +1,230 @@
+body {
+    resize: both;
+    max-width: 900px;
+    margin-left: 22%;
+    align-content: center;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+h1 {
+    margin-left: 50px;
+    color: darkblue;
+}
+.back{
+      background-color: yellowgreen;
+}
+
+h2 {
+    height: 30px;
+    background-color: yellowgreen;
+}
+.h3{
+    color:darkblue;
+    font-weight:bolder;
+    font-size:2em;
+}
+footer {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    vertical-align: middle;
+    position: relative;
+    background-color: yellowgreen;
+    color: darkblue;
+    top: 50%;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bolder;
+}
+
+.column {
+    float: left;
+    width: 33%;
+}
+
+.column_after {
+    width: 60%;
+    float: left;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column_form {
+
+    float: left;
+    width: 28%;
+}
+.column_form3 {
+    float: left;
+    width: 60%;
+}
+.column_form4 {
+    float: left;
+    width: 10%;
+}
+.column_form5 {
+    width:5%;
+    margin-top:255px;
+    height:515px;
+    float:left;
+}
+.column_form_after {
+    width: 60%;
+    float: left;
+}
+.column_form_afterpicture {
+    width: 72%;
+    float: left;
+}
+.Font{
+    color:blue;
+    font-size:1.2em;
+}
+.row_form:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.title_card {
+    padding-top:0.3em;
+    padding-bottom:0.3em;
+    color: white;
+    background-color: yellowgreen;
+    width: 100%;
+   
+}
+
+.DropDownList {
+    width: 180px;
+    border-color: skyblue;
+}
+
+.TextBox {
+    width: 350px;
+    border-color: skyblue;
+}
+
+.TextBox1 {
+    width: 60px;
+    border-color: skyblue;
+}
+
+.TextBox2 {
+    width: 160px;
+    border-color: skyblue;
+}
+
+.form {
+    width:540px;
+    background-color: #f0bb75;
+}
+.para_height{
+   padding-bottom:0.08em;
+   padding-top:0.1em;
+}
+.Displaypicture{
+    margin-left:25px;
+    height:240px;
+    width:200px;
+}
+.visa_image {
+    border: 1px solid darkgray;
+    padding-top: 1.7em;
+    padding-bottom: 1.7em;
+    vertical-align: bottom;
+    width: 80px;
+    height: 18px;
+    position: relative;
+    top: 52px;
+    left: -1px;
+}
+.button_startimage {
+    width: 30px;
+    height: 30px;
+}
+.button_cancelimage {
+    width: 30px;
+    height: 30px;
+}
+.button_paymentimage {
+    
+    float:right;
+    }
+.button_worldpay{
+    float:right;
+}
+.button_makepayment{
+    float:right;
+}
+hr {
+   height:2px;
+    background-color: yellowgreen;
+    width: 100%;
+    margin-left:-5px;
+}
+.pay {
+    Height :48px;
+    Width:153px;
+}
+.label {
+    color: darkblue;
+    font-size: 2em;
+}
+.help
+{
+    margin-top:200px;
+}
+a{
+    color:black;
+}
+.auto-style2 {
+            float: right;
+            height: 40px;
+        }
+#cardnumber{
+    color:red;
+}
+#cvv{
+    color:red;
+}
+#yearandmonth{
+    color:red;
+}
+#name{
+    color:red;
+}
+#address{
+    color:red;
+}
+#address2{
+    color:red;
+}
+#address3{
+    color:red;
+}
+#city{
+    color:red;
+}
+#region{
+    color:red;
+}
+#zipcode{
+    color:red;
+}
+#country{
+    color:red;
+}
+#telephone{
+    color:red;
+}
+#fax{
+    color:red;
+}
+#emailID{
+    color:red;
+}
