@@ -233,6 +233,7 @@ function Payment() {
     emailvalidation();
     if (resultcardnumber&&resultcvv&&resultdate&&resultname&&resultaddress&&resultcity&&resultpincode&&resultemail) {
         alert("payment successfull");
+    }
 else{
     alert("please fill the required fields");
 }
